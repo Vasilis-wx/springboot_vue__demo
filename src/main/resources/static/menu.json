@@ -1,0 +1,112 @@
+[
+    {
+        "id": 2,
+        "path": "/home",
+        "component": "Home",
+        "name": "员工资料",
+        "iconCls": "fa fa-user-circle-o",
+        "children": [
+            {
+                "id": null,
+                "path": "/emp/basic",
+                "component": "EmpBasic",
+                "name": "基本资料",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                    "keepAlive": false,
+                    "requireAuth": true
+                }
+            }
+        ],
+        "meta": {
+            "keepAlive": false,
+            "requireAuth": true
+        }
+    },
+    {
+        "id": 6,
+        "path": "/home",
+        "component": "Home",
+        "name": "系统管理",
+        "iconCls": "fa fa-windows",
+        "children": [
+            {
+                "id": null,
+                "path": "/sys/basic",
+                "component": "SysBasic",
+                "name": "基础信息设置",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                    "keepAlive": false,
+                    "requireAuth": true
+                }
+            },
+            {
+                "id": null,
+                "path": "/sys/cfg",
+                "component": "SysCfg",
+                "name": "系统管理",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                    "keepAlive": false,
+                    "requireAuth": true
+                }
+            },
+            {
+                "id": null,
+                "path": "/sys/log",
+                "component": "SysLog",
+                "name": "操作日志管理",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                    "keepAlive": false,
+                    "requireAuth": true
+                }
+            },
+            {
+                "id": null,
+                "path": "/sys/hr",
+                "component": "SysHr",
+                "name": "操作员管理",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                    "keepAlive": false,
+                    "requireAuth": true
+                }
+            },
+            {
+                "id": null,
+                "path": "/sys/data",
+                "component": "SysData",
+                "name": "备份恢复数据库",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                    "keepAlive": false,
+                    "requireAuth": true
+                }
+            },
+            {
+                "id": null,
+                "path": "/sys/init",
+                "component": "SysInit",
+                "name": "初始化数据库",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                    "keepAlive": false,
+                    "requireAuth": true
+                }
+            }
+        ],
+        "meta": {
+            "keepAlive": false,
+            "requireAuth": true
+        }
+    }
+]
