@@ -10,17 +10,21 @@
         "component": "Home",
         "name": "员工资料",
         "iconCls": "language",
-        "title": "empInfo",
+        "meta": {
+          "title": "empInfo",
+          "keepAlive": false,
+          "requireAuth": true
+        },
         "children": [
           {
             "id": null,
             "path": "/emp/index",
-            "title": "empIndex",
             "component": "EmpIndex",
             "name": "测试",
             "iconCls": null,
             "children": [],
             "meta": {
+              "title": "empIndex",
               "keepAlive": false,
               "index": 1,
               "requireAuth": true
@@ -29,22 +33,18 @@
           {
             "id": null,
             "path": "/emp/basic",
-            "title": "empBasic",
             "component": "EmpBasic",
             "name": "基本资料",
             "iconCls": null,
             "children": [],
             "meta": {
+              "title": "empBasic",
               "keepAlive": false,
               "index": 1,
               "requireAuth": true
             }
           }
-        ],
-        "meta": {
-          "keepAlive": false,
-          "requireAuth": true
-        }
+        ]
       }
     ]
   },
@@ -56,20 +56,24 @@
       {
         "id": 2,
         "path": "/home",
-        "title": "sysMana",
         "component": "Home",
         "name": "系统管理22",
         "iconCls": "language",
+        "meta": {
+          "title": "sysMana",
+          "keepAlive": false,
+          "requireAuth": true
+        },
         "children": [
           {
             "id": null,
             "path": "/sys/basic",
-            "title": "basicInfoSet",
             "component": "SysBasic",
             "name": "基础信息设置",
             "iconCls": null,
             "children": [],
             "meta": {
+              "title": "basicInfoSet",
               "keepAlive": false,
               "index": 2,
               "requireAuth": true
@@ -79,12 +83,12 @@
             "id": null,
             "index": 2,
             "path": "/sys/cfg",
-            "title": "sysConfig",
             "component": "SysCfg",
             "name": "系统管理",
             "iconCls": null,
             "children": [],
             "meta": {
+              "title": "sysConfig",
               "keepAlive": false,
               "requireAuth": true
             }
@@ -92,12 +96,12 @@
           {
             "id": null,
             "path": "/sys/log",
-            "title": "sysLog",
             "component": "SysLog",
             "name": "操作日志管理",
             "iconCls": null,
             "children": [],
             "meta": {
+              "title": "sysLog",
               "keepAlive": false,
               "index": 2,
               "requireAuth": true
@@ -106,12 +110,12 @@
           {
             "id": null,
             "path": "/sys/hr",
-            "title": "sysHr",
             "component": "SysHr",
             "name": "操作员管理",
             "iconCls": null,
             "children": [],
             "meta": {
+              "title": "sysHr",
               "keepAlive": false,
               "index": 2,
               "requireAuth": true
@@ -120,12 +124,12 @@
           {
             "id": null,
             "path": "/sys/data",
-            "title": "sysDataBack",
             "component": "SysData",
             "name": "备份恢复数据库",
             "iconCls": null,
             "children": [],
             "meta": {
+              "title": "sysDataBack",
               "keepAlive": false,
               "index": 2,
               "requireAuth": true
@@ -134,22 +138,18 @@
           {
             "id": null,
             "path": "/sys/init",
-            "title": "sysDataInit",
             "component": "SysInit",
             "name": "初始化数据库",
             "iconCls": null,
             "children": [],
             "meta": {
+              "title": "sysDataInit",
               "keepAlive": false,
               "index": 2,
               "requireAuth": true
             }
           }
-        ],
-        "meta": {
-          "keepAlive": false,
-          "requireAuth": true
-        }
+        ]
       }
     ]
   }
