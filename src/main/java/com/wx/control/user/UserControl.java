@@ -58,6 +58,7 @@ public class UserControl {
      */
     @RequestMapping("/delUser/{ids}")
     public AjaxMsg delUser(@PathVariable  String ids) {
+
         Map<String,Object> map = new HashMap<>();
         try {
             userService.delUserByIds(ids);
