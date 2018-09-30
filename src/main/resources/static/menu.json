@@ -1,112 +1,156 @@
 [
-    {
-        "id": 2,
+  {
+    "index": 1,
+    "name": "系统管理",
+    "title": "systemManage",
+    "routers": [
+      {
+        "id": 1,
         "path": "/home",
         "component": "Home",
         "name": "员工资料",
-        "iconCls": "fa fa-user-circle-o",
+        "iconCls": "language",
+        "title": "empInfo",
         "children": [
-            {
-                "id": null,
-                "path": "/emp/basic",
-                "component": "EmpBasic",
-                "name": "基本资料",
-                "iconCls": null,
-                "children": [],
-                "meta": {
-                    "keepAlive": false,
-                    "requireAuth": true
-                }
+          {
+            "id": null,
+            "path": "/emp/index",
+            "title": "empIndex",
+            "component": "EmpIndex",
+            "name": "测试",
+            "iconCls": null,
+            "children": [],
+            "meta": {
+              "keepAlive": false,
+              "index": 1,
+              "requireAuth": true
             }
+          },
+          {
+            "id": null,
+            "path": "/emp/basic",
+            "title": "empBasic",
+            "component": "EmpBasic",
+            "name": "基本资料",
+            "iconCls": null,
+            "children": [],
+            "meta": {
+              "keepAlive": false,
+              "index": 1,
+              "requireAuth": true
+            }
+          }
         ],
         "meta": {
-            "keepAlive": false,
-            "requireAuth": true
+          "keepAlive": false,
+          "requireAuth": true
         }
-    },
-    {
-        "id": 6,
+      }
+    ]
+  },
+  {
+    "index": 2,
+    "name": "订单管理",
+    "title": "orderManage",
+    "routers": [
+      {
+        "id": 2,
         "path": "/home",
+        "title": "sysMana",
         "component": "Home",
-        "name": "系统管理",
-        "iconCls": "fa fa-windows",
+        "name": "系统管理22",
+        "iconCls": "language",
         "children": [
-            {
-                "id": null,
-                "path": "/sys/basic",
-                "component": "SysBasic",
-                "name": "基础信息设置",
-                "iconCls": null,
-                "children": [],
-                "meta": {
-                    "keepAlive": false,
-                    "requireAuth": true
-                }
-            },
-            {
-                "id": null,
-                "path": "/sys/cfg",
-                "component": "SysCfg",
-                "name": "系统管理",
-                "iconCls": null,
-                "children": [],
-                "meta": {
-                    "keepAlive": false,
-                    "requireAuth": true
-                }
-            },
-            {
-                "id": null,
-                "path": "/sys/log",
-                "component": "SysLog",
-                "name": "操作日志管理",
-                "iconCls": null,
-                "children": [],
-                "meta": {
-                    "keepAlive": false,
-                    "requireAuth": true
-                }
-            },
-            {
-                "id": null,
-                "path": "/sys/hr",
-                "component": "SysHr",
-                "name": "操作员管理",
-                "iconCls": null,
-                "children": [],
-                "meta": {
-                    "keepAlive": false,
-                    "requireAuth": true
-                }
-            },
-            {
-                "id": null,
-                "path": "/sys/data",
-                "component": "SysData",
-                "name": "备份恢复数据库",
-                "iconCls": null,
-                "children": [],
-                "meta": {
-                    "keepAlive": false,
-                    "requireAuth": true
-                }
-            },
-            {
-                "id": null,
-                "path": "/sys/init",
-                "component": "SysInit",
-                "name": "初始化数据库",
-                "iconCls": null,
-                "children": [],
-                "meta": {
-                    "keepAlive": false,
-                    "requireAuth": true
-                }
+          {
+            "id": null,
+            "path": "/sys/basic",
+            "title": "basicInfoSet",
+            "component": "SysBasic",
+            "name": "基础信息设置",
+            "iconCls": null,
+            "children": [],
+            "meta": {
+              "keepAlive": false,
+              "index": 2,
+              "requireAuth": true
             }
+          },
+          {
+            "id": null,
+            "index": 2,
+            "path": "/sys/cfg",
+            "title": "sysConfig",
+            "component": "SysCfg",
+            "name": "系统管理",
+            "iconCls": null,
+            "children": [],
+            "meta": {
+              "keepAlive": false,
+              "requireAuth": true
+            }
+          },
+          {
+            "id": null,
+            "path": "/sys/log",
+            "title": "sysLog",
+            "component": "SysLog",
+            "name": "操作日志管理",
+            "iconCls": null,
+            "children": [],
+            "meta": {
+              "keepAlive": false,
+              "index": 2,
+              "requireAuth": true
+            }
+          },
+          {
+            "id": null,
+            "path": "/sys/hr",
+            "title": "sysHr",
+            "component": "SysHr",
+            "name": "操作员管理",
+            "iconCls": null,
+            "children": [],
+            "meta": {
+              "keepAlive": false,
+              "index": 2,
+              "requireAuth": true
+            }
+          },
+          {
+            "id": null,
+            "path": "/sys/data",
+            "title": "sysDataBack",
+            "component": "SysData",
+            "name": "备份恢复数据库",
+            "iconCls": null,
+            "children": [],
+            "meta": {
+              "keepAlive": false,
+              "index": 2,
+              "requireAuth": true
+            }
+          },
+          {
+            "id": null,
+            "path": "/sys/init",
+            "title": "sysDataInit",
+            "component": "SysInit",
+            "name": "初始化数据库",
+            "iconCls": null,
+            "children": [],
+            "meta": {
+              "keepAlive": false,
+              "index": 2,
+              "requireAuth": true
+            }
+          }
         ],
         "meta": {
-            "keepAlive": false,
-            "requireAuth": true
+          "keepAlive": false,
+          "requireAuth": true
         }
-    }
+      }
+    ]
+  }
 ]
