@@ -6,12 +6,14 @@ import com.wx.fmode.user.FUser;
 import com.wx.model.user.TUser;
 import com.wx.service.user.UserService;
 import com.wx.util.DateUtils;
+import com.wx.util.PageInfo;
 import com.wx.util.ResultVOUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -33,18 +35,15 @@ public class UserControl {
 
     /**
      * 用户list
-     * @param page
-     * @param size
-     * @param map
+     * @param pageInfo
      * @return
      */
     @RequestMapping("/list")
-    public ResultVO<Map<String,String>> list(@RequestParam(value = "page",defaultValue = "1") Integer page,
-                     @RequestParam(value = "size",defaultValue = "10") Integer size,
-                     Map<String,Object> map){
+    public ResultVO<Map<String,String>> list(PageInfo pageInfo){
 
-        PageRequest pageRequest = PageRequest.of(page-1,size);
-        Page<TUser> userList = userService.findList(pageRequest);
+        Page<TUser> userList = userService.findList(pageInfo.getPageRequestWithSort());
+
+        Map<String,Object> map = new HashMap<>();
         map.put("emps",userList.getContent());
         map.put("totalCount",userList.getTotalElements());
 
