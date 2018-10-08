@@ -61,10 +61,10 @@ public class UserControl {
         Map<String,Object> map = new HashMap<>();
         try {
             userService.delUserByIds(ids);
-            return new AjaxMsg("success","删除成功");
+            return new AjaxMsg(true,"删除成功");
         } catch (Exception e) {
             e.printStackTrace();
-            return new AjaxMsg("error","删除出现问题");
+            return new AjaxMsg(false,"删除出现问题");
         }
     }
 
@@ -81,10 +81,10 @@ public class UserControl {
             user.setBirthday(DateUtils.strToDate(fUser.getBirthday()));
             user.setPassword("666");
             userService.addUser(user);
-            return new AjaxMsg("success","添加成功");
+            return new AjaxMsg(true,"添加成功");
         } catch (Exception e) {
             e.printStackTrace();
-            return new AjaxMsg("error","添加用户出现问题");
+            return new AjaxMsg(false,"添加用户出现问题");
         }
     }
 

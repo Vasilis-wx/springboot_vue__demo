@@ -10,16 +10,24 @@ import lombok.Data;
 @Data
 public class AjaxMsg {
 
-    private String status;
+    private boolean status;
 
     private String msg;
+
+    private String result;
 
     public AjaxMsg() {
 
     }
 
-    public AjaxMsg(String status, String msg) {
+    public AjaxMsg(boolean status, String msg) {
         this.status = status;
         this.msg = msg;
+    }
+
+    public AjaxMsg(boolean status, String msg, String result) {
+        this.status = status;
+        this.msg = msg;
+        this.result = result;
     }
 }
