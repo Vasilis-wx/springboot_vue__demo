@@ -7,6 +7,10 @@ spring:
     username: root
     password: 111111
     url: jdbc:mysql://47.98.173.75:3306/vue_springboot_demo?characterEncoding=utf-8&useSSL=false
+#    http:
+#      multipart:
+#        maxFileSize: 10Mb
+#        maxRequestSize: 100Mb
 
   jpa:
     show-sql: true
