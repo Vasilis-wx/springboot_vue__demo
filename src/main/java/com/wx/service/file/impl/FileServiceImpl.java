@@ -20,4 +20,9 @@ public class FileServiceImpl implements FileService {
     public void addFile(TSysFile sysFile) {
         fileDao.save(sysFile);
     }
+
+    @Override
+    public TSysFile getFile(String uuid) {
+        return fileDao.getTSysFileByUuid(uuid);
+    }
 }

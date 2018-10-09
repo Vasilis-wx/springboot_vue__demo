@@ -21,6 +21,7 @@ public class PageInfo {
     private String order;
 
     public PageRequest getPageRequest(){
+        Sort sort = new Sort(Sort.Direction.DESC, "id");
         return PageRequest.of(page-1, size);
     }
 

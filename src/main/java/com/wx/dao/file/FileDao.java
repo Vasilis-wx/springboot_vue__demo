@@ -10,4 +10,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface FileDao extends JpaRepository<TSysFile,String> {
 
     TSysFile save(TSysFile sysFile);
+
+    TSysFile getTSysFileByUuid(String uuid);
+
 }

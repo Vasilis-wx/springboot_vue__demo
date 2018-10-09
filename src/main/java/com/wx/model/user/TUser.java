@@ -13,8 +13,8 @@ import java.util.Date;
  * Created by wx
  * 2018/9/21
  */
-@Entity
 @Data
+@Entity(name = "user")
 public class TUser {
 
     @Id
@@ -30,6 +30,8 @@ public class TUser {
     private Integer sex;// 1男 2女
 
     private String userface;// 头像
+
+    private String userfaceUUid;// 头像图片uuid
 
     private Date birthday;// 出生日期
 

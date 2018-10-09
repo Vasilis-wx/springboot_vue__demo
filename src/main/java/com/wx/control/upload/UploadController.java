@@ -36,11 +36,11 @@ public class UploadController {
     @Value("${prop.upload-folder}")
     private String UPLOAD_FOLDER;
 
-    @PostMapping("/upload/singleFile")
-    public Object singleFileUpload(MultipartFile file) {
+    @PostMapping("/singleFile")
+    public AjaxMsg singleFileUpload(MultipartFile file) {
 //        logger.debug("传入的文件参数：{}", JSON.toJSONString(file, true));
          if (Objects.isNull(file) || file.isEmpty()) {
-            return "文件为空，请重新上传";
+             return new AjaxMsg(false,"文件为空，请重新上传");
         }
 
         try {

@@ -1,6 +1,8 @@
 package com.wx.service.user.impl;
 
 import com.wx.dao.user.UserDao;
+import com.wx.fmode.user.FUser;
+import com.wx.fmode.user.UserI;
 import com.wx.model.user.TUser;
 import com.wx.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,9 +32,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Page<TUser> findList(Pageable pageable) {
+    public Page<FUser> findList(Pageable pageable) {
         //获取所有人员
-        Page<TUser> userPage = userDao.findAll(pageable);
+        Page<FUser> userPage = userDao.findAllUser(pageable);
         return userPage;
     }
 

@@ -26,6 +26,10 @@ public class FUser {
 
     private String userface;// 头像
 
+    private String userfaceUUid;// 头像图片uuid
+
+    private String userfaceUrl;// 头像图片url
+
     private String birthday;// 出生日期
 
     private String address;// 地址

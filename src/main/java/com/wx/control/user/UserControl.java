@@ -3,6 +3,7 @@ package com.wx.control.user;
 import com.wx.VO.AjaxMsg;
 import com.wx.VO.ResultVO;
 import com.wx.fmode.user.FUser;
+import com.wx.fmode.user.UserI;
 import com.wx.model.user.TUser;
 import com.wx.service.user.UserService;
 import com.wx.util.DateUtils;
@@ -37,7 +38,7 @@ public class UserControl {
     @RequestMapping("/list")
     public ResultVO<Map<String,String>> list(PageInfo pageInfo){
 
-        Page<TUser> userList = userService.findList(pageInfo.getPageRequestWithSort());
+        Page<FUser> userList = userService.findList(pageInfo.getPageRequestWithSort());
 
         Map<String,Object> map = new HashMap<>();
         map.put("emps",userList.getContent());

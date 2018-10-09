@@ -8,4 +8,6 @@ import com.wx.model.file.TSysFile;
  */
 public interface FileService {
     void addFile(TSysFile sysFile);
+
+    TSysFile getFile(String uuid);
 }

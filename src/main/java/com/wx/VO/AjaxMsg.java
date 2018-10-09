@@ -14,7 +14,7 @@ public class AjaxMsg {
 
     private String msg;
 
-    private String result;
+    private Object result;
 
     public AjaxMsg() {
 
@@ -25,7 +25,7 @@ public class AjaxMsg {
         this.msg = msg;
     }
 
-    public AjaxMsg(boolean status, String msg, String result) {
+    public AjaxMsg(boolean status, String msg, Object result) {
         this.status = status;
         this.msg = msg;
         this.result = result;
