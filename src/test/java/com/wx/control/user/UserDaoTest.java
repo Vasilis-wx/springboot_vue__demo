@@ -1,6 +1,7 @@
 package com.wx.control.user;
 
 import com.wx.dao.user.UserDao;
+import com.wx.fmode.user.FUser;
 import com.wx.model.user.TUser;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,8 +32,8 @@ public class UserDaoTest {
     }
 
     @Test
-    public void findByUsernameAngetAllPassword(){
-        List<Map<String,Object>> LIST = userDao.findAllUser2(20);
-        System.out.printf(LIST.size()+"");
+    public void finall(){
+//        List<FUser> LIST = userDao.findAllUser2();
+//        System.out.printf(LIST.size()+"");
     }
 }

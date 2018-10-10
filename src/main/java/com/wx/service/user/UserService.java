@@ -16,7 +16,7 @@ public interface UserService {
     TUser findUserByUsernameAndPassword(String username,String password);
 
     /** 查询人员列表 */
-    Page<FUser> findList(Pageable pageable);
+    Page<TUser> findList(Pageable pageable);
 
     void delUserByIds(String ids);
 

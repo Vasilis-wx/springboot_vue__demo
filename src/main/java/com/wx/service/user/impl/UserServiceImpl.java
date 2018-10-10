@@ -32,9 +32,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Page<FUser> findList(Pageable pageable) {
+    public Page<TUser> findList(Pageable pageable) {
         //获取所有人员
-        Page<FUser> userPage = userDao.findAllUser(pageable);
+        Page<TUser> userPage = userDao.findAll(pageable);
         return userPage;
     }
 

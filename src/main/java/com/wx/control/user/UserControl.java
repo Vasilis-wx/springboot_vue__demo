@@ -38,7 +38,7 @@ public class UserControl {
     @RequestMapping("/list")
     public ResultVO<Map<String,String>> list(PageInfo pageInfo){
 
-        Page<FUser> userList = userService.findList(pageInfo.getPageRequestWithSort());
+        Page<TUser> userList = userService.findList(pageInfo.getPageRequestWithSort());
 
         Map<String,Object> map = new HashMap<>();
         map.put("emps",userList.getContent());
