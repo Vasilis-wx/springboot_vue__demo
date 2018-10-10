@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.Assert.*;
 
@@ -26,6 +27,12 @@ public class UserDaoTest {
     @Test
     public void findByUsernameAndPassword(){
         List<TUser> LIST = userDao.findByUsernameAndPassword("wx","666");
+        System.out.printf(LIST.size()+"");
+    }
+
+    @Test
+    public void findByUsernameAngetAllPassword(){
+        List<Map<String,Object>> LIST = userDao.findAllUser2(20);
         System.out.printf(LIST.size()+"");
     }
 }
