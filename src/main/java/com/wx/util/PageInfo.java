@@ -22,7 +22,7 @@ public class PageInfo {
 
     public PageRequest getPageRequest(){
         Sort sort = new Sort(Sort.Direction.DESC, "id");
-        return PageRequest.of(page-1, size);
+        return PageRequest.of(page-1, size, sort);
     }
 
     public PageRequest getPageRequestWithSort(){

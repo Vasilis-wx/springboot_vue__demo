@@ -25,6 +25,6 @@ spring:
       ddl-auto: update
 
 prop:
-  upload-folder: E:/IDEACode/vue_springboot_demo/src/main/resources/static/image/
+  upload-folder: E:/image/
 
 

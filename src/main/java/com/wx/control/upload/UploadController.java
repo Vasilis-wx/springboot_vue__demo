@@ -78,7 +78,7 @@ public class UploadController {
             sysFile.setUrl("image/"+newSavePath+"/"+newfileName);
             fileService.addFile(sysFile);
 
-            return new AjaxMsg(true,"文件上传成功",uuid);
+            return new AjaxMsg(true,"文件上传成功",sysFile);
         } catch (IOException e) {
             e.printStackTrace();
             return new AjaxMsg(false,"后端异常...");
