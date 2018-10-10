@@ -22,6 +22,6 @@ public interface UserDao extends JpaRepository<TUser,Integer> {
 
     TUser save(TUser user);
 
-    @Query(value="select user.* ,sysFile.url as userfaceUrl from user left join sys_file sysFile  on sysFile.uuid =  user.userfaceUUid ", nativeQuery=true)
+    @Query(value="select user ,sysFile.url as userfaceUrl from user left join sys_file sysFile  on sysFile.uuid =  user.userfaceUUid ")
     Page<FUser> findAllUser(Pageable pageable);
 }
