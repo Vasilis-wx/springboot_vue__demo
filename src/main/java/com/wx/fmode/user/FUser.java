@@ -37,4 +37,6 @@ public class FUser {
     private String email;
 
     private String phone;
+
+    private String attachments;
 }

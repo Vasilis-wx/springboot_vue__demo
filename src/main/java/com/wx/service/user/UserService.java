@@ -1,7 +1,5 @@
 package com.wx.service.user;
 
-import com.wx.fmode.user.FUser;
-import com.wx.fmode.user.UserI;
 import com.wx.model.user.TUser;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -21,4 +19,6 @@ public interface UserService {
     void delUserByIds(String ids);
 
     void addUser(TUser user);
+
+    void editUser(TUser user);
 }

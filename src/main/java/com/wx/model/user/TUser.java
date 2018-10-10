@@ -41,4 +41,6 @@ public class TUser {
 
     private String phone;
 
+    private String attachments;
+
 }

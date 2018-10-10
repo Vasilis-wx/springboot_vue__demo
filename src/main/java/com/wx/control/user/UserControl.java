@@ -3,7 +3,6 @@ package com.wx.control.user;
 import com.wx.VO.AjaxMsg;
 import com.wx.VO.ResultVO;
 import com.wx.fmode.user.FUser;
-import com.wx.fmode.user.UserI;
 import com.wx.model.user.TUser;
 import com.wx.service.user.UserService;
 import com.wx.util.DateUtils;
@@ -82,6 +81,25 @@ public class UserControl {
         } catch (Exception e) {
             e.printStackTrace();
             return new AjaxMsg(false,"添加用户出现问题");
+        }
+    }
+
+    /**
+     * 修改用户
+     * @param fUser
+     * @return
+     */
+    @RequestMapping("/editUser")
+    public AjaxMsg editUser(FUser fUser){
+        try {
+            TUser user = new TUser();
+            BeanUtils.copyProperties(fUser,user);
+            user.setBirthday(DateUtils.strToDate(fUser.getBirthday()));
+            userService.editUser(user);
+            return new AjaxMsg(true,"修改成功");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new AjaxMsg(false,"修改用户出现问题");
         }
     }
 

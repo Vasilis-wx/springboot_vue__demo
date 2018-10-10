@@ -1,8 +1,6 @@
 package com.wx.service.user.impl;
 
 import com.wx.dao.user.UserDao;
-import com.wx.fmode.user.FUser;
-import com.wx.fmode.user.UserI;
 import com.wx.model.user.TUser;
 import com.wx.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,6 +46,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void addUser(TUser user) {
+        userDao.save(user);
+    }
+
+    @Override
+    public void editUser(TUser user) {
         userDao.save(user);
     }
 }
