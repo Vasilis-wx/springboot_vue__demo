@@ -5,11 +5,38 @@
     "title": "systemManage",
     "routers": [
       {
+        "id": 11,
+        "path": "/",
+        "component": "Home",
+        "name": "首页",
+        "iconCls": "dashboard",
+        "meta": {
+          "title": "mainPage",
+          "keepAlive": false,
+          "requireAuth": true
+        },
+        "children": [
+          {
+            "id": null,
+            "path": "/dashboard",
+            "component": "Dashboard",
+            "name": "首页",
+            "iconCls": "dashboard",
+            "meta": {
+              "title": "mainPage",
+              "keepAlive": false,
+              "index": 1,
+              "requireAuth": true
+            }
+          }
+        ]
+      },
+      {
         "id": 1,
-        "path": "/home",
+        "path": "/",
         "component": "Home",
         "name": "员工资料",
-        "iconCls": "language",
+        "iconCls": "user",
         "meta": {
           "title": "empInfo",
           "keepAlive": false,
@@ -22,7 +49,6 @@
             "component": "EmpIndex",
             "name": "测试",
             "iconCls": null,
-            "children": [],
             "meta": {
               "title": "empIndex",
               "keepAlive": false,
@@ -55,9 +81,9 @@
     "routers": [
       {
         "id": 2,
-        "path": "/home",
+        "path": "/sys",
         "component": "Home",
-        "name": "系统管理22",
+        "name": "系统管理",
         "iconCls": "language",
         "meta": {
           "title": "sysMana",
@@ -86,7 +112,34 @@
             "component": "SysCfg",
             "name": "系统管理",
             "iconCls": null,
-            "children": [],
+            "children": [{
+              "id": null,
+              "path": "/sys/hr",
+              "component": "SysHr",
+              "name": "操作员管理",
+              "iconCls": null,
+              "children": [],
+              "meta": {
+                "title": "sysHr",
+                "keepAlive": false,
+                "index": 2,
+                "requireAuth": true
+              }
+            },
+              {
+                "id": null,
+                "path": "/sys/data",
+                "component": "SysData",
+                "name": "备份恢复数据库",
+                "iconCls": null,
+                "children": [],
+                "meta": {
+                  "title": "sysDataBack",
+                  "keepAlive": false,
+                  "index": 2,
+                  "requireAuth": true
+                }
+              }],
             "meta": {
               "title": "sysConfig",
               "keepAlive": false,
@@ -102,34 +155,6 @@
             "children": [],
             "meta": {
               "title": "sysLog",
-              "keepAlive": false,
-              "index": 2,
-              "requireAuth": true
-            }
-          },
-          {
-            "id": null,
-            "path": "/sys/hr",
-            "component": "SysHr",
-            "name": "操作员管理",
-            "iconCls": null,
-            "children": [],
-            "meta": {
-              "title": "sysHr",
-              "keepAlive": false,
-              "index": 2,
-              "requireAuth": true
-            }
-          },
-          {
-            "id": null,
-            "path": "/sys/data",
-            "component": "SysData",
-            "name": "备份恢复数据库",
-            "iconCls": null,
-            "children": [],
-            "meta": {
-              "title": "sysDataBack",
               "keepAlive": false,
               "index": 2,
               "requireAuth": true

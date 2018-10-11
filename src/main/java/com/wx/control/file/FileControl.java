@@ -4,6 +4,7 @@ import com.wx.VO.AjaxMsg;
 import com.wx.model.file.TSysFile;
 import com.wx.service.file.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,6 +35,9 @@ public class FileControl {
      */
     @GetMapping("/getFile")
     public AjaxMsg getFile(String uuids) {
+        if(StringUtils.isEmpty(uuids)){
+            return new AjaxMsg(false,"没有文件");
+        }
         String[] uuidAray = uuids.split(",");
 
         List<TSysFile> sysFileList = new ArrayList<>();
